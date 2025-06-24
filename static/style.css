@@ -1,6 +1,6 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #d3cce3, #e9e4f0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,14 +12,21 @@ body {
     max-width: 600px;
     background-color: #fff;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #2c3e50;
+    font-size: 2rem;
 }
 
 form {
@@ -29,27 +36,27 @@ form {
 }
 
 form input[type="text"] {
-    padding: 0.5rem;
+    padding: 0.6rem;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 8px 0 0 8px;
     outline: none;
     flex: 1;
 }
 
 form button {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     font-size: 1rem;
     border: none;
-    background-color: #4CAF50;
+    background-color: #6a5acd;
     color: white;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #5b4ab4;
 }
 
 ul {
@@ -72,11 +79,12 @@ li s {
 
 a {
     text-decoration: none;
-    color: #2196F3;
+    color: #6a5acd;
     font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #0b7dda;
+    color: #4b3aa0;
 }

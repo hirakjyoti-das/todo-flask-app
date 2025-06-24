@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ToDo List App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>My ToDo List</h1>
+        <h1>📝 My ToDo List</h1>
 
         <!-- Form to add a task -->
         <form action="/add" method="post">
@@ -24,7 +25,7 @@
                         <s>{{ task.task }}</s>
                     {% else %}
                         {{ task.task }}
-                        <a href="/complete/{{ loop.index0 }}">[Mark as Done]</a>
+                        <a href="/complete/{{ loop.index0 }}">✔ Mark as Done</a>
                     {% endif %}
                 </li>
             {% endfor %}
